@@ -108,7 +108,7 @@ def leave_comment_on_job(comment_text):
 def cleanup_datasets():
     project_datasets = get_project_datasets()
     for dataset in project_datasets:
-        dataset_path = dataset['datasetPath']
+        dataset_path = dataset['datasetRwDto']['datasetPath']
         PROTECTED_DIR = 'inputdata'
         for (root, dirs, files) in os.walk(dataset_path, topdown=True):
             for name in files:
@@ -119,7 +119,7 @@ def cleanup_datasets():
 def full_cx():
     project_datasets = get_project_datasets()
     for dataset in project_datasets:
-        dataset_id = dataset['id']
+        dataset_id = dataset['datasetRwDto']['id']
         snapshot_id, formatted_timestamp, snapshot_response = take_dataset_snapshot(dataset_id)
         tag_dataset_snapshot(dataset_id, snapshot_id, formatted_timestamp)
         snapshot_comment = format_snapshot_comment(snapshot_response, formatted_timestamp)
