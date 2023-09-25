@@ -150,7 +150,9 @@
 %if %sysfunc(find(%upcase(&__PROJECT_TYPE.),RE)) ge 1 %then %do;
   * imported read-only SDTM data, using the data cutoff date.. ;
   * .. and sdtm variable to identify the correct snapshot to use ;
-  libname SDTM "/mnt/imported/data/snapshots/SDTMBLIND/&__DCUTDTC." access=readonly;
+  %let __SDTM_DATASET = %sysget(SDTM_DATASET);
+  %if &__SDTM_DATASET. eq %str() %then %put %str(ER)ROR: Environment Variable SDTM_DATASET not set;
+  libname SDTM "/mnt/imported/data/snapshots/&__SDTM_DATASET./&__DCUTDTC." access=readonly;
   * local read/write acces to ADaM and QC folders;
   libname ADAM   "&__localdata_path./ADAM";
   libname ADAMQC "&__localdata_path./ADAMQC";
