@@ -17,7 +17,7 @@ def is_valid(pdf_path):
     print(f"Error validating {pdf_path}: {e}")
     return False
 
-for root, dirs, files in os.walk('/mnt/artifacts'):
+for root, dirs, files in os.walk('/mnt/artifacts/TFL'):
   for file in files:
     if file.endswith('.pdf'):
       pdf_path = os.path.join(root, file)
@@ -28,5 +28,5 @@ for root, dirs, files in os.walk('/mnt/artifacts'):
       else:
         print(f"Skipping invalid PDF: {pdf_path}")
         
-merger.write("/mnt/artifacts/pdfs/combined.pdf")
+merger.write("/mnt/artifacts/TFL/combined.pdf")
 merger.close()
