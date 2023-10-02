@@ -28,5 +28,5 @@ for root, dirs, files in os.walk('/mnt/artifacts/TFL'):
       else:
         print(f"Skipping invalid PDF: {pdf_path}")
         
-merger.write("/mnt/artifacts/TFL/combined.pdf")
+merger.write("/mnt/artifacts/TFL/combined_TFLs.pdf")
 merger.close()
