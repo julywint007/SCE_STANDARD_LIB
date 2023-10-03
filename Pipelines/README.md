@@ -25,7 +25,7 @@ imported_repo_git_refs: imported_repo_1,ref_type,ref_value imported_repo_2,ref_t
 
 - `command:` - Required. This must be a valid path to an executable starting from `/mnt/` (Domino File System projects) or `/mnt/code/` (git-based projects), and can include arguments passed into the executable. For example, `script.sh arg1 arg2`.
 
-- `depends:` - Optional. Valid values include any other defined job in the jobs.cfg file, including multiple job names separated by a single space. If present, the job will not start until the specified jobs have completed.
+- `depends:` - Optional. Valid values include any other defined job in the jobs.cfg file, including multiple job names separated by a single comma `,`. If present, the job will not start until the specified jobs have completed.
 
 - `project_repo_git_ref` - Optional. An alternative git ref can be specified for the project repo. Only 1 value is valid, which is a comma separated list consisting of the reference type and the reference value. 
 
