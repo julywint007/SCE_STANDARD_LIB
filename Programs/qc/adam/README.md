@@ -1,1 +1,0 @@
-This folder should contain QC code to validate and verify production ADaM datasets.
