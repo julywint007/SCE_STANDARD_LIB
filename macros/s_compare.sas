@@ -15,7 +15,7 @@
 *           In addition to a classic proc compare, returns codes are used to target additional detail and provide 
 *           additional summaries from the execution.
 *           By working with the returns codes, we are able to tailor the summary report to ignore certain items checked (e.g. variabel length)
-*           where not neccessary          
+*           where not neccessary        edit
 *    
 *  Input Macro Parameters
 *      See macro code for details
