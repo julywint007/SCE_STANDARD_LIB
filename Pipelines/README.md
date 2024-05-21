@@ -12,7 +12,7 @@ Modify the jobs.cfg file as needed to add as many jobs as desired. Each job entr
 tier: Medium
 environment: 61f1574701b8062cc1bed9d9
 command: script.sh
-depends: job1
+depends: job1 test
 project_repo_git_ref: ref_type,ref_value
 imported_repo_git_refs: imported_repo_1,ref_type,ref_value imported_repo_2,ref_type,ref_value
 ```
